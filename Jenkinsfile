@@ -3,8 +3,7 @@ pipeline {
     stages {
         stage('Checkout Code') {
             steps {
-                // Use the credentialsId you created
-                git credentialsId: 'github-credentials', url: 'https://github.com/minnu1102/blossom-flowers.git'
+                git branch: 'main', credentialsId: 'github-credentials', url: 'https://github.com/minnu1102/blossom-flowers.git'
             }
         }
         stage('Build Docker Image') {
